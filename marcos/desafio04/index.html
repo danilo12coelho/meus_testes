@@ -1,0 +1,37 @@
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
+<div id='desafio04'>
+    <!--1) Ligue o botão para alterar a exibição dos 2 parágrafos. Uso ambos v-if e v-show e 
+    inspecione os elementos para ver a diferença-->
+    <h2>#01</h2>
+
+    <button @click='altera = !altera'>{{altera ? 'Alterar':'Alterar'}}</button>
+
+    <p v-if="!altera">Você quer me ver ...</p>
+    <p v-else='altera'>... ou eu</p>
+    <p v-show="!altera">Você quer me ver ...</p>
+    <p v-show="altera">... ou eu</p>
+
+    <!--2) Exiba em uma <ul> um array de elementos da sua escolha. 
+        mprima também o indice de cada elemento.-->        
+    <h2>#02</h2>
+
+    <ul>
+        <li v-for='(id, nome) in array'>
+             {{indice}} -- {{id}}
+        </li>
+     </ul>
+
+     <!--3) Imprimir todos os pares de valor-chave do objeto a seguir: -->
+     <h2>#02</h2>
+
+    <ul>
+        <li v-='livros in livro'>
+             Titulo: {{livro.titulo}}<br>
+             Autor: {{livro.autor}}<br>
+             Volume: {{livro.volume}}
+        </li>
+     </ul>
+</div>
+<script src="apps.js"></script>

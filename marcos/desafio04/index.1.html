@@ -1,0 +1,43 @@
+
+        <div id='desafio'>
+            
+            <!--1) Ligue o botão para alterar a exibição dos 2 parágrafos. Uso ambos v-if e v-show e 
+            inspecione os elementos para ver a diferença-->
+            <h2>#01</h2>
+
+            <button @click="altara">{{altera}}</button>
+            <p v-if="altera">Você quer me ver ...</p>
+            <p v-else>... ou eu</p>
+            <p v-show="altera">Você quer me ver ...</p>
+            <p v-show="altera">... ou e</p>
+
+            <!--2) Exiba em uma <ul> um array de elementos da sua escolha. 
+                Imprima também o indice de cada elemento.-->        
+            <h2>#02</h2>
+
+            <ul>
+                <li v-for='(id, nome) in array'>
+                    {{indice}} -- {{id}}
+                </li>
+            </ul>
+        </div>
+
+        <script>    
+            new Vue({
+                el: '#desafio',
+                data: {
+                    altera: false,
+                    array:['pedro',"bia", 'rebeca'],
+                    livro:{
+                        tirulo: 'O senhor dos aneis',
+                        autor: 'j. r r. tolkies',
+                        volume: '3'
+                    },
+                    aluno: {
+                        id: 10,
+                        nome: 'maria',
+                        notas: [7.67, 8.33, 9.21]
+                    }
+                }
+            })
+        </script>

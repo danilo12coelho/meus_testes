@@ -1,0 +1,16 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<div id='desafio'>
+    <p>Usando VueJs - {{NOME}}, {{IDADE}} ANOS</p>
+    <p>{{IDADE*3}}</p>
+    <p>{{numerosAl()}}</p>
+
+    <div>
+        <input type="text" v-bind:value='NOME'>
+    </div>
+    
+    <div>
+        <img v-bind:src="link" alt="" height="400">
+    </div>
+    
+</div>
+<script src="app.js" ></script>

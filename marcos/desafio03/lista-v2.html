@@ -1,0 +1,26 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+ <div id= 'app'>
+     <ul>
+         <li v-for='pessoa in pessoas'>
+             <div  v-for='(valor, chave, indice) in pessoa'>
+                 {{indice}} -- {{chave}} -- {{valor}}
+                 <br>
+                 
+             </div>
+         </li>
+     </ul>
+     
+ </div>
+
+ <script>
+    new Vue({
+        el: '#app',
+        data: {
+            cores: ["verde", "branco","amarelo","azul"],
+            pessoas:[
+                {nome: "Mara", idade: 19, peso: 59},
+                {nome:"Be", idade: 15, peso: 68}
+            ]
+        }
+    })
+</script>
